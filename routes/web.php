@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[\App\Http\Controllers\HomeController::class,'spots']);
 Route::get('/detail-spot/{slug}',[\App\Http\Controllers\HomeController::class,'detailSpot'])->name('detail-spot');
+Route::get('navbar', function () {
+    return view('navbar');
+});
 
 Auth::routes();
 
