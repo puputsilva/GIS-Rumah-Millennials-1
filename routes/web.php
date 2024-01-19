@@ -3,10 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[\App\Http\Controllers\HomeController::class,'spots']);
+// Route::resource('/',(\App\Http\Controllers\HomeController::class));
 Route::get('/detail-spot/{slug}',[\App\Http\Controllers\HomeController::class,'detailSpot'])->name('detail-spot');
-Route::get('navbar', function () {
-    return view('navbar');
-});
+// Route::get('navbar', function () {
+//     return view('navbar');
+// });
 
 Auth::routes();
 
