@@ -8,6 +8,9 @@ Route::get('/detail-spot/{slug}',[\App\Http\Controllers\HomeController::class,'d
 // Route::get('navbar', function () {
 //     return view('navbar');
 // });
+Route::get('/maintemplate',[\App\Http\Controllers\HomeController::class,'maintemplate']);
+Route::get('/frontend',[\App\Http\Controllers\HomeController::class,'frontend']);
+
 
 Auth::routes();
 
