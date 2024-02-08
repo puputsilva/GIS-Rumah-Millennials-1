@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',[\App\Http\Controllers\HomeController::class,'spots']);
+Route::get('/spots',[\App\Http\Controllers\HomeController::class,'spots']);
 // Route::resource('/',(\App\Http\Controllers\HomeController::class));
 Route::get('/detail-spot/{slug}',[\App\Http\Controllers\HomeController::class,'detailSpot'])->name('detail-spot');
 // Route::get('navbar', function () {
 //     return view('navbar');
 // });
+Route::get('/',[\App\Http\Controllers\HomeController::class,'maintemplate']);
 Route::get('/maintemplate',[\App\Http\Controllers\HomeController::class,'maintemplate']);
 Route::get('/frontend',[\App\Http\Controllers\HomeController::class,'frontend']);
 

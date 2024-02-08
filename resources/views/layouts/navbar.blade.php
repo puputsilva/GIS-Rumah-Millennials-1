@@ -76,7 +76,7 @@
             </ul>
           </li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="{{url('/frontend')}}">Let See Geotagging!</a></li>
+          <li><a class="getstarted scrollto" href="{{url('/spots')}}">Let See Geotagging!</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
