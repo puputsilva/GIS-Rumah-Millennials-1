@@ -69,32 +69,32 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
         <div class="icon-box">
           <div class="icon"><i class="bx bxl-dribbble"></i></div>
-          <h4 class="title"><a href="">M-Talks (Millennials Talks)</a></h4>
-          <p class="description">M-Talks merupakan program Talkshow yang mengangkat berbagai macam tema, yang bertujuan untuk pengembang soft-skills bagi generasi Millennials.</p>
+          <h4 class="title"><a href="">Millennials Talks</a></h4>
+          <p align="justify" class="description">M-Talks merupakan program Talkshow yang mengangkat berbagai macam tema, yang bertujuan untuk pengembang soft-skills bagi generasi Millennials.</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
         <div class="icon-box">
           <div class="icon"><i class="bx bx-file"></i></div>
-          <h4 class="title"><a href="">MPD (Millennials Professional Development)</a></h4>
-          <p class="description">MPD (Millennials Personal Development) merupakan program mentoring dari penjaga rumah, community ambassador, dan ketua bidang yang ahli di bidangnya untuk pengembangan diri Millennials Indonesia.</p>
+          <h4 class="title"><a href="">Millennials Professional Development</a></h4>
+          <p align="justify" class="description">MPD (Millennials Personal Development) merupakan program mentoring dari penjaga rumah, community ambassador, dan ketua bidang yang ahli di bidangnya untuk pengembangan diri Millennials Indonesia.</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
         <div class="icon-box">
           <div class="icon"><i class="bx bx-tachometer"></i></div>
-          <h4 class="title"><a href="">MDO (Millennials Day Out)</a></h4>
-          <p class="description">MDO (Millennials Day Out) merupakan Program having fun untuk mempererat silaturahmi dan mengasah kreatifitas generasi millennials.</p>
+          <h4 class="title"><a href="">Millennials Day Out</a></h4>
+          <p align="justify" class="description">MDO (Millennials Day Out) merupakan Program having fun untuk mempererat silaturahmi dan mengasah kreatifitas generasi millennials.</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
         <div class="icon-box">
           <div class="icon"><i class="bx bx-world"></i></div>
-          <h4 class="title"><a href="">M-Met (Millennials Meeting)</a></h4>
-          <p class="description">Millennials meeting merupakan kegiatan silaturahmi dan meeting yang dilakukan oleh siblings (pengurus inti Rumah Millennials), penjaga rumah, ketua – ketua bidang, community ambassador dan anggota Rumah Millennials Campus Network (RMCN).</p>
+          <h4 class="title"><a href="">Millennials Meeting</a></h4>
+          <p align="justify" class="description">Millennials meeting merupakan kegiatan silaturahmi dan meeting yang dilakukan oleh siblings (pengurus inti Rumah Millennials), penjaga rumah, ketua – ketua bidang, community ambassador dan anggota Rumah Millennials Campus Network (RMCN).</p>
         </div>
       </div>
 
