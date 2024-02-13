@@ -8,8 +8,9 @@ Route::get('/detail-spot/{slug}',[\App\Http\Controllers\HomeController::class,'d
 // Route::get('navbar', function () {
 //     return view('navbar');
 // });
-Route::get('/',[\App\Http\Controllers\HomeController::class,'maintemplate']);
-Route::get('/maintemplate',[\App\Http\Controllers\HomeController::class,'maintemplate']);
+Route::get('/',[\App\Http\Controllers\HomeController::class,'utama']);
+Route::get('/coba',[\App\Http\Controllers\HomeController::class,'coba']);
+Route::get('/utama',[\App\Http\Controllers\HomeController::class,'utama']);
 Route::get('/frontend',[\App\Http\Controllers\HomeController::class,'frontend']);
 
 

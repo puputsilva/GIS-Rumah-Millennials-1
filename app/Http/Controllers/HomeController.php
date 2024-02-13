@@ -28,9 +28,14 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function maintemplate() 
+    public function utama() 
     { 
-        return view('maintemplate'); 
+        return view('utama'); 
+    } 
+
+    public function coba() 
+    { 
+        return view('layouts.coba'); 
     } 
 
     public function frontend() 
