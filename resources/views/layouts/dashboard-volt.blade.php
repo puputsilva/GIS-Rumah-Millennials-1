@@ -85,11 +85,11 @@
                 class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
                 <div class="d-flex align-items-center">
                     <div class="avatar-lg me-4">
-                        <img src="{{ asset('volt/src/assets/img/team/profile-picture-1.jpg') }}"
+                        <img src="{{ asset('volt/src/assets/img/team/profile-picture-1.png') }}"
                             class="card-img-top rounded-circle border-white" alt="Bonnie Green">
                     </div>
                     <div class="d-block">
-                        <h2 class="h5 mb-3">Hi, Jane</h2>
+                        <h2 class="h5 mb-3">Hi, Admin</h2>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                             class="btn btn-secondary btn-sm d-inline-flex align-items-center">
@@ -305,7 +305,7 @@
                                     <img class="avatar rounded-circle" alt="Image placeholder"
                                         src="{{ asset('volt/html&css/assets/img/team/profile-picture-3.jpg') }}">
                                     <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-                                        <span class="mb-0 font-small fw-bold text-gray-900">Bonnie Green</span>
+                                        <span class="mb-0 font-small fw-bold text-gray-900">Admin Pengurus</span>
                                     </div>
                                 </div>
                             </a>

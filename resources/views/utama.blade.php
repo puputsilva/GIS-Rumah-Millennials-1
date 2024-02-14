@@ -45,11 +45,11 @@
             <i class="bx bx-cube-alt"></i>
             <h4>Tujuan RM</h4>
             <p align="justify">Merangsang generasi muda agar lebih aktif, optimis, dan berkontribusi dalam lingkungannya. Menampilkan teladan dari generasi muda yang berprestasi untuk menginspirasi anak muda lainnya. Memfasilitasi pertemuan lintas bidang generasi muda untuk saling melengkapi dan berkontribusi demi kebaikan bersama.</p>
+            <p style="text-align: right;">
+                <a href="https://rumahmillennials.com/about/" style="text-decoration: underline;">View Detail</a>
+            </p>
           </div>
         </div>
-        <p><u>
-          <a href="https://rumahmillennials.com/about/" > View Detail </a>
-        </u></p>
       </div>
     </div>
 
@@ -112,7 +112,7 @@
       <p>Gallery</p>
     </div>
 
-    <div class="row" data-aos="fade-up" data-aos-delay="100">
+    <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class="col-lg-12">
         <ul id="portfolio-flters">
           <li data-filter="*" class="filter-active">All</li>
@@ -121,7 +121,7 @@
           <li data-filter=".filter-web">Web</li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
@@ -353,20 +353,20 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Clients</h2>
-      <p>They trusted us</p>
+      <h2>Partners</h2>
+      <p>EXCLUSIVE PARTNERSHIP</p>
     </div>
 
     <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/partner-1.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/partner-2.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/partner-3.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/partner-4.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/partner-5.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/partner-6.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/partner-7.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/clients/partner-8.png" class="img-fluid" alt=""></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -409,33 +409,54 @@
         </div>
 
       </div>
-
+      
       <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-          <div class="row">
+        @if(session()->has('message'))
+          <div class="alert alert-success">
+          {{ session()->get('message') }}
+          </div>
+        @endif  
+        <form action="{{ route('send.email') }}" method="post">
+        @csrf
+        <div class="row">
             <div class="form-group col-md-6">
-              <label for="name">Your Name</label>
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              <label for="inputName">Your Name</label>
+              <input type="text" name="name" class="form-control" placeholder="Enter Name" required>
+              @error('name')
+                <span class="text-danger"> {{ $message }} </span>
+              @enderror
             </div>
             <div class="form-group col-md-6 mt-3 mt-md-0">
-              <label for="name">Your Email</label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-            </div>
+            <label for="inputEmail">Email</label>
+              <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                @error('email')
+                <span class="text-danger"> {{ $message }} </span>
+                @enderror
+							</div>
           </div>
           <div class="form-group mt-3">
-            <label for="name">Subject</label>
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-          </div>
+          <label for="inputSubject">Subject</label>
+            <input type="text" name="subject" class="form-control" placeholder="Enter subject">
+              @error('subject')
+                <span class="text-danger"> {{ $message }} </span>
+              @enderror
           <div class="form-group mt-3">
-            <label for="name">Message</label>
-            <textarea class="form-control" name="message" rows="10" required></textarea>
+          <label for="inputMessage">Message</label>
+            <textarea name="content" rows="5" class="form-control" placeholder="Enter Your Message"></textarea>
+              @error('content')
+                <span class="text-danger"> {{ $message }} </span>
+              @enderror
           </div>
-          <div class="my-3">
+					<div class="text-center">
+						<button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
+					</div>            
+
+          <!-- <div class="my-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your message has been sent. Thank you!</div>
           </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
+          <div class="text-center"><button type="submit">Send Message</button></div> -->
         </form>
       </div>
 
@@ -447,4 +468,4 @@
 
 </main><!-- End #main -->
 
-@endsection
+<!-- @endsection -->

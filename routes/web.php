@@ -13,6 +13,8 @@ Route::get('/coba',[\App\Http\Controllers\HomeController::class,'coba']);
 Route::get('/utama',[\App\Http\Controllers\HomeController::class,'utama']);
 Route::get('/frontend',[\App\Http\Controllers\HomeController::class,'frontend']);
 
+Route::get('/utama', [\App\Http\Controllers\HomeController::class,'utama']);
+Route::post('/utama', [\App\Http\Controllers\HomeController::class,'utama'])->name('send.email');
 
 Auth::routes();
 
