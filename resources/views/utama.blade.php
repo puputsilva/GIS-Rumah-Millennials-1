@@ -133,8 +133,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>App 1</h4>
-            <p>App</p>
+            <h4>M Talks Community Empowerment</h4>
+            <p>22 Februari 2020</p>
           </div>
         </div>
       </div>
@@ -147,8 +147,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>Web 3</h4>
-            <p>Web</p>
+            <h4>M-talks</h4>
+            <p>Inclusion 101: Travel with Kindness</p>
           </div>
         </div>
       </div>
@@ -161,8 +161,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>App 2</h4>
-            <p>App</p>
+            <h4>M-Talks</h4>
+            <p>Say No To Hoax & 2nd Anniversary Rumah Millennials</p>
           </div>
         </div>
       </div>
@@ -175,8 +175,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>Card 2</h4>
-            <p>Card</p>
+            <h4>Road To 1st Anniversary Rumah Millennials</h4>
+            <p>Juli 2018</p>
           </div>
         </div>
       </div>
@@ -189,8 +189,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>Web 2</h4>
-            <p>Web</p>
+            <h4>Rumah Millennials x Parfi 56 x Pusbang Kemendikbud</h4>
+            <p>Februari – April 2018</p>
           </div>
         </div>
       </div>
@@ -203,8 +203,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>App 3</h4>
-            <p>App</p>
+            <h4>M-Talks Perempuan Bercerita</h4>
+            <p>Rumah Millennials 2019</p>
           </div>
         </div>
       </div>
@@ -217,8 +217,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>Card 1</h4>
-            <p>Card</p>
+            <h4>M-Talks</h4>
+            <p>Explore Indonesia With Tourism</p>
           </div>
         </div>
       </div>
@@ -231,8 +231,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>Card 3</h4>
-            <p>Card</p>
+            <h4>Good News From Indonesia x Rumah Millennials</h4>
+            <p>Rumah Millennials 2018</p>
           </div>
         </div>
       </div>
@@ -245,8 +245,8 @@
             <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
           </div>
           <div class="portfolio-info">
-            <h4>Web 3</h4>
-            <p>Web</p>
+            <h4>Grand Launching Rumah Millennials</h4>
+            <p>2017</p>
           </div>
         </div>
       </div>
@@ -303,19 +303,19 @@
   <div class="container">
 
     <div class="section-title" data-aos="fade-up">
-      <h2>Team</h2>
+      <h2>Person in Charge</h2>
       <p>Our team is always here to help</p>
     </div>
 
-    <div class="row">
+    <div class="row justify-content-center">
 
       <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
         <div class="member">
-          <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+          <img src="{{asset('assets/img/team/taufan.jpg')}}" class="img-fluid" alt="">
           <div class="member-info">
             <div class="member-info-content">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
+              <h4>TAUFAN TEGUH AKBARI</h4>
+              <span>FOUNDER & CHAIRMAN</span>
             </div>
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
@@ -329,11 +329,11 @@
 
       <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
         <div class="member">
-          <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+          <img src="assets/img/team/asih.jpeg" class="img-fluid" alt="">
           <div class="member-info">
             <div class="member-info-content">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
+              <h4>ASIH DEWI KARIM</h4>
+              <span>GENERAL SECRETARY</span>
             </div>
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
@@ -344,45 +344,7 @@
           </div>
         </div>
       </div>
-
-      <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-        <div class="member">
-          <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-          <div class="member-info">
-            <div class="member-info-content">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-            </div>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-        <div class="member">
-          <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-          <div class="member-info">
-            <div class="member-info-content">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-            </div>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-
   </div>
 </section><!-- End Team Section -->
 
