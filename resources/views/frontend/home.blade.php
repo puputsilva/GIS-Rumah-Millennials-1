@@ -13,7 +13,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Map Spot Pengurus Rumah Millennials</div>
+                    <div class="card-header">Geotagging Rumah Millennials</div>
                     <div class="card-body">
                         <div id="map" style="height: 500px"></div>
                     </div>
