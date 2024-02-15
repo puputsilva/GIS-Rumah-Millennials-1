@@ -7,7 +7,6 @@
   <div class="row gy-4">
     <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
       <h1>Berdaya, Berkarya, Bermakna</h1>
-      <!-- <h2>We are team of talented designers making websites with Bootstrap</h2> -->
       <div>
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
       </div>
@@ -18,11 +17,11 @@
   </div>
 </div>
 
-</section><!-- End Hero -->
+</section>
 
 <main id="main">
 
-<!-- ======= About Section ======= -->
+<!-- About Section -->
 <section id="about" class="about">
   <div class="container">
 
@@ -54,14 +53,14 @@
     </div>
 
   </div>
-</section><!-- End About Section -->
+</section>
+<!-- End About Section -->
 
-<!-- ======= Services Section ======= -->
+<!-- Services Section -->
 <section id="services" class="services section-bg">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <!-- <h2>Services</h2> -->
       <p>Program</p>
     </div>
 
@@ -101,30 +100,17 @@
     </div>
 
   </div>
-</section><!-- End Services Section -->
+</section>
+<!-- End Services Section -->
 
-<!-- ======= Portfolio Section ======= -->
+<!-- Portfolio Section  -->
 <section id="portfolio" class="portfolio">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <!-- <h2>Portfolio</h2> -->
       <p>Gallery</p>
     </div>
-
-    <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-lg-12">
-        <ul id="portfolio-flters">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
-        </ul>
-      </div>
-    </div> -->
-
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
           <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
@@ -190,7 +176,7 @@
           </div>
           <div class="portfolio-info">
             <h4>Rumah Millennials x Parfi 56 x Pusbang Kemendikbud</h4>
-            <p>Februari – April 2018</p>
+            <p>Februari–April 2018</p>
           </div>
         </div>
       </div>
@@ -250,13 +236,12 @@
           </div>
         </div>
       </div>
-
     </div>
-
   </div>
-</section><!-- End Portfolio Section -->
+</section>
+<!-- End Portfolio Section -->
 
-<!-- ======= F.A.Q Section ======= -->
+<!-- F.A.Q Section  -->
 <section id="faq" class="faq section-bg">
   <div class="container" data-aos="fade-up">
 
@@ -266,7 +251,6 @@
     </div>
 
     <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
-
       <li>
         <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Apa itu komunitas Rumah Millennials?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
         <div id="faq1" class="collapse" data-bs-parent=".faq-list">
@@ -296,9 +280,10 @@
     </ul>
 
   </div>
-</section><!-- End F.A.Q Section -->
+</section>
+<!-- End F.A.Q Section -->
 
-<!-- ======= Team Section ======= -->
+<!-- Team Section  -->
 <section id="team" class="team">
   <div class="container">
 
@@ -308,7 +293,6 @@
     </div>
 
     <div class="row justify-content-center">
-
       <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
         <div class="member">
           <img src="{{asset('assets/img/team/taufan.jpg')}}" class="img-fluid" alt="">
@@ -346,9 +330,10 @@
       </div>
     </div>
   </div>
-</section><!-- End Team Section -->
+</section>
+<!-- End Team Section -->
 
-<!-- ======= Clients Section ======= -->
+<!-- Clients Section -->
 <section id="clients" class="clients section-bg">
   <div class="container" data-aos="fade-up">
 
@@ -370,11 +355,10 @@
       </div>
       <div class="swiper-pagination"></div>
     </div>
-
   </div>
-</section><!-- End Clients Section -->
+</section>
 
-<!-- ======= Contact Us Section ======= -->
+<!-- Contact Us Section -->
 <section id="contact" class="contact">
   <div class="container" data-aos="fade-up">
 
@@ -384,15 +368,8 @@
     </div>
 
     <div class="row">
-
       <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
         <div class="info">
-          <!-- <div class="address">
-            <i class="bi bi-geo-alt"></i>
-            <h4>Location:</h4>
-            <p>A108 Adam Street, New York, NY 535022</p>
-          </div> -->
-
           <div class="email">
             <i class="bi bi-envelope"></i>
             <h4>Email:</h4>
@@ -404,19 +381,17 @@
             <h4>Call:</h4>
             <p>+1 5589 55488 55s</p>
           </div>
-
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
         </div>
-
       </div>
-      
+
       <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
         @if(session()->has('message'))
           <div class="alert alert-success">
           {{ session()->get('message') }}
           </div>
         @endif  
-        <form action="{{ route('send.email') }}" method="post">
+        <form action="{{ route('send.email') }}" method="post" class="php-email-form">
         @csrf
         <div class="row">
             <div class="form-group col-md-6">
@@ -450,22 +425,14 @@
 					<div class="text-center">
 						<button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
 					</div>            
-
-          <!-- <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div> -->
         </form>
       </div>
-
     </div>
-
   </div>
 </section>
 <!-- End Contact Us Section -->
 
-</main><!-- End #main -->
+</main>
+<!-- End #main -->
 
-<!-- @endsection -->
+@endsection

@@ -15,6 +15,18 @@ Route::get('/frontend',[\App\Http\Controllers\HomeController::class,'frontend'])
 
 Route::get('/utama', [\App\Http\Controllers\HomeController::class,'utama']);
 Route::post('/utama', [\App\Http\Controllers\HomeController::class,'utama'])->name('send.email');
+Route::post('/utama', [\App\Http\Controllers\EmailController::class,'sendEmail'])->name('send.email');
+
+// Route::get('/send-email',function(){
+//     $data = [
+//         'name' => 'Syahrizal As',
+//         'body' => 'Testing Kirim Email di Santri Koding'
+//     ];
+   
+//     Mail::to('puputsilva73@gmail.com')->send(new SendEmail($data));
+   
+//     dd("Email Berhasil dikirim.");
+// });
 
 Auth::routes();
 
