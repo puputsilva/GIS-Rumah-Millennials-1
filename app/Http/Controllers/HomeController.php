@@ -33,9 +33,9 @@ class HomeController extends Controller
         return view('utama'); 
     } 
 
-    public function coba() 
+    public function gallery() 
     { 
-        return view('layouts.coba'); 
+        return view('gallery'); 
     } 
 
     public function frontend() 
