@@ -244,12 +244,14 @@
                 </div>
 
                 <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
-                    @foreach ($qnas as $item)
+                    @foreach ($qnas as $index => $item)
                         <li>
-                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">
-                                {{ $item->question }}<i class="bi bi-chevron-down icon-show"></i><i
-                                    class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq{{ $index + 1 }}">
+                                {{ $item->question }}
+                                <i class="bi bi-chevron-down icon-show"></i>
+                                <i class="bi bi-chevron-up icon-close"></i>
+                            </div>
+                            <div id="faq{{ $index + 1 }}" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     {{ $item->answer }}
                                 </p>
