@@ -32,8 +32,8 @@
         }
 
         /* .card:hover a {
-                        color: white;
-                    } */
+                                                    color: white;
+                                                } */
     </style>
 
 
@@ -91,22 +91,40 @@
             </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-xl-4 mb-4">
-            <a href="{{ route('qna.index') }}">
-                <div class="card border-50 shadow text-center">
-                    <div class="card-body">
-                        <div class="row d-block d-xl-flex align-items-center">
-                            <div class="px-xl-0">
-                                <div class="d-none d-sm-block">
-                                    <h3 class="fw-extrabold mb-2"> QnA
-                                    </h3>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <a href="{{ route('qna.index') }}">
+                    <div class="card border-50 shadow text-center">
+                        <div class="card-body">
+                            <div class="row d-block d-xl-flex align-items-center">
+                                <div class="px-xl-0">
+                                    <div class="d-none d-sm-block">
+                                        <h3 class="fw-extrabold mb-2"> QnA
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <a href="{{ route('team.index') }}">
+                    <div class="card border-50 shadow text-center">
+                        <div class="card-body">
+                            <div class="row d-block d-xl-flex align-items-center">
+                                <div class="px-xl-0">
+                                    <div class="d-none d-sm-block">
+                                        <h3 class="fw-extrabold mb-2"> Teams
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
     </div>
 @endsection

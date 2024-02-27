@@ -274,41 +274,28 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="member">
-                            <img src="{{ asset('assets/img/team/taufan.jpg') }}" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>TAUFAN TEGUH AKBARI</h4>
-                                    <span>FOUNDER & CHAIRMAN</span>
-                                </div>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="member">
-                            <img src="assets/img/team/asih.jpeg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>ASIH DEWI KARIM</h4>
-                                    <span>GENERAL SECRETARY</span>
-                                </div>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    @foreach ($team as $item)
+                        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member">
+                                <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>{{ $item->name }}</h4>
+                                        <span>{{ $item->position }}</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href="{{ $item->twitter }}" target="_blank"><i class="bi bi-twitter"></i></a>
+                                        <a href="{{ $item->facebook }}" target="_blank"><i
+                                                class="bi bi-facebook"></i></a>
+                                        <a href="{{ $item->instagram }}" target="_blank"><i
+                                                class="bi bi-instagram"></i></a>
+                                        <a href="{{ $item->linkedin }}" target="_blank"><i
+                                                class="bi bi-linkedin"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>

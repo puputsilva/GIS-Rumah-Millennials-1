@@ -295,6 +295,11 @@
                                     <span class="sidebar-text">QnA</span>
                                 </a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ route('team.index') }}">
+                                    <span class="sidebar-text">Team</span>
+                                </a>
+                            </li>
 
                         </ul>
                     </div>
