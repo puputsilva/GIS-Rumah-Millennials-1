@@ -43,7 +43,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff"> -->
     <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 
     <!-- Sweet Alert -->
@@ -123,7 +123,7 @@
             <ul class="nav flex-column pt-3 pt-md-0">
 
                 <li class="nav-item">
-                    <a href="../../index.html" class="nav-link d-flex align-items-center">
+                    <a href="/home" class="nav-link d-flex align-items-center">
                         <span class="mt-1 ms-1 sidebar-text">Rumah Millennials</span>
                     </a>
                 </li>
@@ -134,7 +134,7 @@
                         data-bs-toggle="collapse" data-bs-target="#submenu-app">
                     <div class="multi-level collapse " role="list" id="submenu-app" aria-expanded="false">
                         <ul class="flex-column nav">
-                            
+
 
                             <li class="nav-item {{ Request::is('simple-map') ? 'active' : '' }}">
                                 <a href="{{ route('simple-map') }}" class="nav-link ">
@@ -145,7 +145,7 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item 
+                            <li class="nav-item
                             {{ Request::is('markers') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('markers') }}" class="nav-link ">
@@ -156,7 +156,7 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item 
+                            <li class="nav-item
                             {{ Request::is('circle') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('circle') }}" class="nav-link ">
@@ -166,8 +166,8 @@
                                     <span class="sidebar-text">Circle</span>
                                 </a>
                             </li>
-            
-                            <li class="nav-item 
+
+                            <li class="nav-item
                             {{ Request::is('polygon') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('polygon') }}" class="nav-link ">
@@ -177,8 +177,8 @@
                                     <span class="sidebar-text">Polygon</span>
                                 </a>
                             </li>
-            
-                            <li class="nav-item 
+
+                            <li class="nav-item
                             {{ Request::is('polyline') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('polyline') }}" class="nav-link ">
@@ -188,8 +188,8 @@
                                     <span class="sidebar-text">Polyline</span>
                                 </a>
                             </li>
-            
-                            <li class="nav-item 
+
+                            <li class="nav-item
                             {{ Request::is('rectangle') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('rectangle') }}" class="nav-link ">
@@ -199,8 +199,8 @@
                                     <span class="sidebar-text">Rectangle</span>
                                 </a>
                             </li>
-            
-                            <li class="nav-item 
+
+                            <li class="nav-item
                             {{ Request::is('layer') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('layer') }}" class="nav-link ">
@@ -210,9 +210,9 @@
                                     <span class="sidebar-text">Layer Control</span>
                                 </a>
                             </li>
-            
+
                             <li
-                                class="nav-item 
+                                class="nav-item
                             {{ Request::is('layer-group') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('layer-group') }}" class="nav-link ">
@@ -222,8 +222,8 @@
                                     <span class="sidebar-text">Layer Group</span>
                                 </a>
                             </li>
-            
-                            <li class="nav-item 
+
+                            <li class="nav-item
                             {{ Request::is('geojson') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('geojson') }}" class="nav-link ">
@@ -233,9 +233,9 @@
                                     <span class="sidebar-text">Geojson</span>
                                 </a>
                             </li>
-            
+
                             <li
-                                class="nav-item 
+                                class="nav-item
                             {{ Request::is('getCoordinate') ? 'active' : '' }}
                             ">
                                 <a href="{{ route('getCoordinate') }}" class="nav-link ">
@@ -248,39 +248,52 @@
                         </ul>
                     </div>
                 </li> -->
-                
+
                 <li class="nav-item">
-                    <span
-                      class="nav-link  collapsed  d-flex justify-content-between align-items-center"
-                      data-bs-toggle="collapse" data-bs-target="#submenu-components">
-                      <span>
-                        <span class="sidebar-icon">
-                          <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                        </span> 
-                        <span class="sidebar-text">Manage Data</span>
-                      </span>
-                      <span class="link-arrow">
-                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                      </span>
+                    <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                        data-bs-toggle="collapse" data-bs-target="#submenu-components">
+                        <span>
+                            <span class="sidebar-icon">
+                                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            <span class="sidebar-text">Manage Data</span>
+                        </span>
+                        <span class="link-arrow">
+                            <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
                     </span>
-                    <div class="multi-level collapse " role="list"
-                      id="submenu-components" aria-expanded="false">
-                      <ul class="flex-column nav">
-                        <li class="nav-item">
-                          <a class="nav-link"
-                            href="{{ route('centre-point.index') }}">
-                            <span class="sidebar-text">Center Point</span>
-                          </a>
-                        </li>
-                        <li class="nav-item ">
-                          <a class="nav-link" href="{{route('spot.index')}}">
-                            <span class="sidebar-text">Spot</span>
-                          </a>
-                        </li>
-                        
-                      </ul>
+                    <div class="multi-level collapse " role="list" id="submenu-components" aria-expanded="false">
+                        <ul class="flex-column nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('centre-point.index') }}">
+                                    <span class="sidebar-text">Center Point</span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ route('spot.index') }}">
+                                    <span class="sidebar-text">Spot</span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ route('program.index') }}">
+                                    <span class="sidebar-text">Program</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </div>
-                  </li>
+                </li>
                 <!--SIDEBAR MENU-->
 
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
@@ -298,19 +311,19 @@
                 <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
                     <div class="d-flex align-items-center">
                     </div>
-                        <li class="nav-item dropdown ms-lg-3">
-                            <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <div class="media d-flex align-items-center">
-                                    <img class="avatar rounded-circle" alt="Image placeholder"
-                                        src="{{ asset('volt/html&css/assets/img/team/profile-picture-3.jpg') }}">
-                                    <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-                                        <span class="mb-0 font-small fw-bold text-gray-900">Admin</span>
-                                    </div>
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="media d-flex align-items-center">
+                                <img class="avatar rounded-circle" alt="Image placeholder"
+                                    src="{{ asset('volt/html&css/assets/img/team/profile-picture-3.jpg') }}">
+                                <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                                    <span class="mb-0 font-small fw-bold text-gray-900">Admin</span>
                                 </div>
-                            </a>
-                            <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
-                                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
+                            <!-- <a class="dropdown-item d-flex align-items-center" href="#">
                                     <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -319,7 +332,7 @@
                                     </svg>
                                     My Profile
                                 </a> -->
-                                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                            <!-- <a class="dropdown-item d-flex align-items-center" href="#">
                                     <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -328,7 +341,7 @@
                                     </svg>
                                     Settings
                                 </a> -->
-                                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                            <!-- <a class="dropdown-item d-flex align-items-center" href="#">
                                     <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -337,7 +350,7 @@
                                     </svg>
                                     Messages
                                 </a> -->
-                                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
+                            <!-- <a class="dropdown-item d-flex align-items-center" href="#">
                                     <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -346,24 +359,23 @@
                                     </svg>
                                     Support
                                 </a> -->
-                                <div role="separator" class="dropdown-divider my-1"></div>
-                                <a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                            <div role="separator" class="dropdown-divider my-1"></div>
+                            <a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
 
-                                    <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
-                                        </path>
-                                    </svg>
-                                    Logout
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
+                                <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                                    </path>
+                                </svg>
+                                Logout
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
                     </ul>
                 </div>
             </div>
@@ -421,7 +433,7 @@
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script>
         window.setTimeout(function() {
-            $(".alert").fadeTo(500,0).slideUp(500,function(){
+            $(".alert").fadeTo(500, 0).slideUp(500, function() {
                 $(this).remove()
             })
         }, 3000);

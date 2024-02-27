@@ -25,52 +25,70 @@
 @extends('layouts.dashboard-volt')
 
 @section('content')
-<style>
-    .card:hover {
-        background-color: skyblue; /* Change the background color to sky blue on hover */
-    }
+    <style>
+        .card:hover {
+            background-color: skyblue;
+            /* Change the background color to sky blue on hover */
+        }
 
-    /* .card:hover a {
-        color: white; 
-    } */
-</style>
+        /* .card:hover a {
+                    color: white;
+                } */
+    </style>
 
 
-<div class="container">
-    <div class="row justify-content-center">
-    <div class="col-12 col-sm-6 col-xl-4 mb-4">
-        <a href="{{url('/centre-point')}}">
-            <div class="card border-50 shadow text-center">
-                <div class="card-body">
-                    <div class="row d-block d-xl-flex align-items-center">
-                        <div class="px-xl-0">
-                            <div class="d-none d-sm-block">
-                                <h3 class="fw-extrabold mb-2"> Center Point
-                                </h3>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <a href="{{ url('/centre-point') }}">
+                    <div class="card border-50 shadow text-center">
+                        <div class="card-body">
+                            <div class="row d-block d-xl-flex align-items-center">
+                                <div class="px-xl-0">
+                                    <div class="d-none d-sm-block">
+                                        <h3 class="fw-extrabold mb-2"> Center Point
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </a>
-        </div>
 
-        <div class="col-12 col-sm-6 col-xl-4 mb-4">
-        <a href="{{url('/spot')}}">
-            <div class="card border-50 shadow text-center">
-                <div class="card-body">
-                    <div class="row d-block d-xl-flex align-items-center">
-                        <div class="px-xl-0">
-                            <div class="d-none d-sm-block">
-                                <h3 class="fw-extrabold mb-2"> Spot 
-                                </h3>
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <a href="{{ url('/spot') }}">
+                    <div class="card border-50 shadow text-center">
+                        <div class="card-body">
+                            <div class="row d-block d-xl-flex align-items-center">
+                                <div class="px-xl-0">
+                                    <div class="d-none d-sm-block">
+                                        <h3 class="fw-extrabold mb-2"> Spot
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </a>
+
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <a href="{{ route('program.index') }}">
+                    <div class="card border-50 shadow text-center">
+                        <div class="card-body">
+                            <div class="row d-block d-xl-flex align-items-center">
+                                <div class="px-xl-0">
+                                    <div class="d-none d-sm-block">
+                                        <h3 class="fw-extrabold mb-2"> Program
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 @endsection

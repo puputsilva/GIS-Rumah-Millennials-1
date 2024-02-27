@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Centre_Point;
 use App\Models\Spot;
+use App\Models\Program;
+use App\Models\Centre_Point;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,20 +29,21 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function utama() 
-    { 
-        return view('utama'); 
-    } 
+    public function utama()
+    {
+        $programs = Program::all();
+        return view('utama', compact('programs'));
+    }
 
-    public function gallery() 
-    { 
-        return view('gallery'); 
-    } 
+    public function gallery()
+    {
+        return view('gallery');
+    }
 
-    public function frontend() 
-    { 
-        return view('layouts.frontend'); 
-    } 
+    public function frontend()
+    {
+        return view('layouts.frontend');
+    }
 
     public function simple_map()
     {
@@ -98,7 +100,7 @@ class HomeController extends Controller
         $centerPoint = Centre_Point::get()->first();
         $spot = Spot::get();
 
-        return view('frontend.home',[
+        return view('frontend.home', [
             'centerPoint' => $centerPoint,
             'spot' => $spot
         ]);
@@ -106,8 +108,7 @@ class HomeController extends Controller
 
     public function detailSpot($slug)
     {
-        $spot = Spot::where('slug',$slug)->first();
-        return view('frontend.detail',['spot' => $spot]);
+        $spot = Spot::where('slug', $slug)->first();
+        return view('frontend.detail', ['spot' => $spot]);
     }
-    
 }

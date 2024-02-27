@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Http\Controllers\Controller;
-use App\Models\Centre_Point;
 use App\Models\Spot;
+use App\Models\Program;
+use App\Models\Centre_Point;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DataController extends Controller
 {
@@ -24,6 +25,16 @@ class DataController extends Controller
         $spot = Spot::latest()->get();
         return datatables()->of($spot)
         ->addColumn('action','backend.Spot.action')
+        ->addIndexColumn()
+        ->rawColumns(['action'])
+        ->toJson();
+    }
+
+    public function program()
+    {
+        $program = Program::latest()->get();
+        return datatables()->of($program)
+        ->addColumn('action','backend.Program.action')
         ->addIndexColumn()
         ->rawColumns(['action'])
         ->toJson();
