@@ -13,10 +13,10 @@
 
 @section('content')
     <div class="container">
-        <a href="{{ route('program.index') }}" class="btn mb-3" style="background-color: #303030; color:white">Kembali</a>
+        <a href="{{ route('program.index') }}" class="btn mb-3" style="background-color: #303030; color:white">Back</a>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold text-black">Ubah Buku</h4>
+                <h4 class="m-0 font-weight-bold text-black">Edit Program</h4>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('program.update', $programs->id) }}" enctype="multipart/form-data">
@@ -41,7 +41,7 @@
                             required>
                     </div>
 
-                    <button type="submit" class="btn" style="background-color: #303030; color:white">Simpan</button>
+                    <button type="submit" class="btn" style="background-color: #303030; color:white">Save</button>
                 </form>
             </div>
         </div>

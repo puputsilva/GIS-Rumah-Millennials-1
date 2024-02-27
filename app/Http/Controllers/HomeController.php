@@ -6,6 +6,7 @@ use App\Models\QnA;
 use App\Models\Spot;
 use App\Models\Team;
 use App\Models\Program;
+use App\Models\Partnership;
 use App\Models\Centre_Point;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,8 @@ class HomeController extends Controller
         $programs = Program::all();
         $qnas = QnA::all();
         $team = Team::all();
-        return view('utama', compact('programs', 'qnas', 'team'));
+        $partnerships = Partnership::all();
+        return view('utama', compact('programs', 'qnas', 'team', 'partnerships'));
     }
 
     public function gallery()

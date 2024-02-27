@@ -300,6 +300,11 @@
                                     <span class="sidebar-text">Team</span>
                                 </a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ route('partnership.index') }}">
+                                    <span class="sidebar-text">Partnership</span>
+                                </a>
+                            </li>
 
                         </ul>
                     </div>

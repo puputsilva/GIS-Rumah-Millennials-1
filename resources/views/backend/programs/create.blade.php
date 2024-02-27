@@ -3,10 +3,10 @@
 
 @section('content')
     <div class="container">
-        <a href="{{ route('program.index') }}" class="btn mb-3" style="background-color: #303030; color:white">Kembali</a>
+        <a href="{{ route('program.index') }}" class="btn mb-3" style="background-color: #303030; color:white">Back</a>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold text-black">Tambah Program</h4>
+                <h4 class="m-0 font-weight-bold text-black">Add Program</h4>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('program.store') }}" enctype="multipart/form-data">
@@ -36,7 +36,7 @@
                         @enderror
                     </div>
 
-                    <button type="submit" class="btn mt-2" style="background-color: #303030; color:white">Simpan</button>
+                    <button type="submit" class="btn mt-2" style="background-color: #303030; color:white">Save</button>
                 </form>
             </div>
         </div>
