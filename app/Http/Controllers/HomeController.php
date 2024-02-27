@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\QnA;
 use App\Models\Spot;
 use App\Models\Program;
 use App\Models\Centre_Point;
@@ -32,7 +33,8 @@ class HomeController extends Controller
     public function utama()
     {
         $programs = Program::all();
-        return view('utama', compact('programs'));
+        $qnas = QnA::all();
+        return view('utama', compact('programs', 'qnas'));
     }
 
     public function gallery()

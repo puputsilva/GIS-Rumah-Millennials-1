@@ -39,9 +39,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/centre-point/data', [\App\Http\Controllers\Backend\DataController::class, 'centrepoint'])->name('centre-point.data');
     Route::get('/spot/data', [\App\Http\Controllers\Backend\DataController::class, 'spot'])->name('spot.data');
     Route::get('/program/data', [\App\Http\Controllers\Backend\DataController::class, 'program'])->name('program.data');
+    Route::get('/qna/data', [\App\Http\Controllers\Backend\DataController::class, 'qna'])->name('qna.data');
 
     Route::resource('centre-point', (\App\Http\Controllers\Backend\CentrePointController::class));
     Route::resource('spot', (\App\Http\Controllers\Backend\SpotController::class));
 
     Route::resource(('program'), (\App\Http\Controllers\ProgramController::class));
+    Route::resource('qna', (\App\Http\Controllers\QnAController::class));
 });
