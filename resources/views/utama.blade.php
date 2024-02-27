@@ -82,47 +82,7 @@
                             </div>
                         </div>
                     @endforeach
-                    {{-- <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4 class="title"><a href="">Millennials Talks</a></h4>
-                            <p align="justify" class="description">M-Talks merupakan program Talkshow yang mengangkat
-                                berbagai macam tema, yang bertujuan untuk pengembang soft-skills bagi generasi Millennials.
-                            </p>
-                        </div> --}}
                 </div>
-
-                {{-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4 class="title"><a href="">Millennials Professional Development</a></h4>
-                            <p align="justify" class="description">MPD (Millennials Personal Development) merupakan program
-                                mentoring dari penjaga rumah, community ambassador, dan ketua bidang yang ahli di bidangnya
-                                untuk pengembangan diri Millennials Indonesia.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4 class="title"><a href="">Millennials Day Out</a></h4>
-                            <p align="justify" class="description">MDO (Millennials Day Out) merupakan Program having fun
-                                untuk mempererat silaturahmi dan mengasah kreatifitas generasi millennials.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4 class="title"><a href="">Millennials Meeting</a></h4>
-                            <p align="justify" class="description">Millennials meeting merupakan kegiatan silaturahmi dan
-                                meeting yang dilakukan oleh siblings (pengurus inti Rumah Millennials), penjaga rumah, ketua
-                                – ketua bidang, community ambassador dan anggota Rumah Millennials Campus Network (RMCN).
-                            </p>
-                        </div>
-                    </div> --}}
-
-            </div>
-
             </div>
         </section>
         <!-- End Services Section -->
@@ -284,45 +244,18 @@
                 </div>
 
                 <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
-                    <li>
-                        <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Apa itu komunitas Rumah
-                            Millennials?<i class="bi bi-chevron-down icon-show"></i><i
-                                class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                                curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Bagaimana komunitas
-                            Rumah Millennials terbentuk? <i class="bi bi-chevron-down icon-show"></i><i
-                                class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
-                                laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium.
-                                Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
-                                tincidunt dui.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Bagaimana cara mendaftar
-                            menjadi anggota komunitas Rumah Millennials?<i class="bi bi-chevron-down icon-show"></i><i
-                                class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                                elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                                pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at
-                                elementum eu facilisis sed odio morbi quis
-                            </p>
-                        </div>
-                    </li>
+                    @foreach ($qnas as $item)
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">
+                                {{ $item->question }}<i class="bi bi-chevron-down icon-show"></i><i
+                                    class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    {{ $item->answer }}
+                                </p>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
 
             </div>

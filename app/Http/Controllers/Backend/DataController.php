@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\QnA;
 use App\Models\Spot;
 use App\Models\Program;
 use App\Models\Centre_Point;
@@ -35,6 +36,16 @@ class DataController extends Controller
         $program = Program::latest()->get();
         return datatables()->of($program)
         ->addColumn('action','backend.Program.action')
+        ->addIndexColumn()
+        ->rawColumns(['action'])
+        ->toJson();
+    }
+
+    public function qna()
+    {
+        $qna = QnA::latest()->get();
+        return datatables()->of($qna)
+        ->addColumn('action','backend.QnA.action')
         ->addIndexColumn()
         ->rawColumns(['action'])
         ->toJson();

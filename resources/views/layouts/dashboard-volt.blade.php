@@ -290,6 +290,11 @@
                                     <span class="sidebar-text">Program</span>
                                 </a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{ route('qna.index') }}">
+                                    <span class="sidebar-text">QnA</span>
+                                </a>
+                            </li>
 
                         </ul>
                     </div>
