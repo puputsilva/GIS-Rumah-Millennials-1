@@ -6,6 +6,7 @@ use App\Models\QnA;
 use App\Models\Spot;
 use App\Models\Team;
 use App\Models\Program;
+use App\Models\Partnership;
 use App\Models\Centre_Point;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -57,6 +58,16 @@ class DataController extends Controller
         $team = Team::latest()->get();
         return datatables()->of($team)
             ->addColumn('action', 'backend.Team.action')
+            ->addIndexColumn()
+            ->rawColumns(['action'])
+            ->toJson();
+    }
+
+    public function partnership()
+    {
+        $partnership = Partnership::latest()->get();
+        return datatables()->of($partnership)
+            ->addColumn('action', 'backend.Partnership.action')
             ->addIndexColumn()
             ->rawColumns(['action'])
             ->toJson();
