@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Models\QnA;
 use App\Models\Spot;
 use App\Models\Team;
+use App\Models\Event;
 use App\Models\Program;
 use App\Models\Partnership;
 use App\Models\Centre_Point;
@@ -68,6 +69,16 @@ class DataController extends Controller
         $partnership = Partnership::latest()->get();
         return datatables()->of($partnership)
             ->addColumn('action', 'backend.Partnership.action')
+            ->addIndexColumn()
+            ->rawColumns(['action'])
+            ->toJson();
+    }
+
+    public function event()
+    {
+        $events = Event::latest()->get();
+        return datatables()->of($events)
+            ->addColumn('action', 'backend.Event.action')
             ->addIndexColumn()
             ->rawColumns(['action'])
             ->toJson();

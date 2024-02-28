@@ -13,7 +13,7 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'utama'])->name('u
 Route::get('/coba', [\App\Http\Controllers\HomeController::class, 'coba']);
 Route::get('/utama', [\App\Http\Controllers\HomeController::class, 'utama']);
 Route::get('/frontend', [\App\Http\Controllers\HomeController::class, 'frontend']);
-Route::get('/gallery', [\App\Http\Controllers\HomeController::class, 'gallery']);
+Route::get('/gallery/{id}', [\App\Http\Controllers\HomeController::class, 'event'])->name('event.gallery');
 
 Route::get('/utama', [\App\Http\Controllers\HomeController::class, 'utama']);
 Route::post('/utama', [\App\Http\Controllers\HomeController::class, 'utama'])->name('send.email');
@@ -42,6 +42,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/qna/data', [\App\Http\Controllers\Backend\DataController::class, 'qna'])->name('qna.data');
     Route::get('/team/data', [\App\Http\Controllers\Backend\DataController::class, 'team'])->name('team.data');
     Route::get('/partnership/data', [\App\Http\Controllers\Backend\DataController::class, 'partnership'])->name('partnership.data');
+    Route::get('/event/data', [\App\Http\Controllers\Backend\DataController::class, 'event'])->name('event.data');
 
     Route::resource('centre-point', (\App\Http\Controllers\Backend\CentrePointController::class));
     Route::resource('spot', (\App\Http\Controllers\Backend\SpotController::class));
@@ -50,4 +51,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('qna', (\App\Http\Controllers\QnAController::class));
     Route::resource('team', (\App\Http\Controllers\TeamController::class));
     Route::resource('partnership', (\App\Http\Controllers\PartnershipController::class));
+    Route::resource('event', (\App\Http\Controllers\EventController::class));
 });
