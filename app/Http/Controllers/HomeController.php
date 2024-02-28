@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\QnA;
 use App\Models\Spot;
 use App\Models\Team;
+use App\Models\Event;
 use App\Models\Program;
 use App\Models\Partnership;
 use App\Models\Centre_Point;
@@ -38,12 +39,15 @@ class HomeController extends Controller
         $qnas = QnA::all();
         $team = Team::all();
         $partnerships = Partnership::all();
-        return view('utama', compact('programs', 'qnas', 'team', 'partnerships'));
+        $events = Event::all();
+
+        return view('utama', compact('programs', 'qnas', 'team', 'partnerships', 'events'));
     }
 
-    public function gallery()
+    public function event(String $id)
     {
-        return view('gallery');
+        $event = Event::find($id);
+        return view('backend.event.detail', compact('event'));
     }
 
     public function frontend()

@@ -101,13 +101,32 @@
                             <li data-filter="*" class="filter-active">Akan Datang</li>
                             <li data-filter=".filter-app">Sudah Terlaksana</li>
                             <!-- <li data-filter=".filter-card">Card</li>
-                    <li data-filter=".filter-web">Web</li> -->
+                                                                                                                                    <li data-filter=".filter-web">Web</li> -->
                         </ul>
                     </div>
                 </div>
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+
+                    @foreach ($events as $item)
+                        <div class="col-lg-4 col-md-6 portfolio-item {{ $item->attribute }}">
+                            <div class="portfolio-wrap">
+                                <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid" alt="" />
+                                <div class="portfolio-links">
+                                    <a href="{{ asset('storage/' . $item->image) }}" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title="{{ $item->description }}"><i
+                                            class="bi bi-plus"></i></a>
+                                    <a href="{{ route('event.gallery', $item->id) }}" title="More Details"><i
+                                            class="bi bi-link"></i></a>
+                                </div>
+                                <div class="portfolio-info">
+                                    <h4>{{ $item->name }}</h4>
+                                    <p>{{ \Carbon\Carbon::parse($item->date)->format('d F Y') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
                             <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="" />
                             <div class="portfolio-links">
@@ -122,9 +141,9 @@
                                 <p>01 Maret 2024</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
                             <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="" />
                             <div class="portfolio-links">
@@ -242,7 +261,7 @@
                                 <p>Web</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </section>
