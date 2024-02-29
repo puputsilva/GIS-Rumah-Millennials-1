@@ -1,4 +1,4 @@
-@extends('layouts.dashboard-volt')
+@extends('layouts.admin.master')
 
 @section('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
@@ -8,10 +8,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="card">
-                    <div class="card-header">
-                        Set Team
-                        <a href="{{ route('team.create') }}" class="btn btn-info btn-sm float-end">Create Team</a>
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <h4 class="m-0 font-weight-bold" style="color: black">Team Data</h4>
+                        <div class="d-sm-flex align-items-center mt-3">
+                            <a href="{{ route('team.create') }}" class="btn text-white" style="background-color: #303030"><i
+                                    class="fas fa-plus-circle"></i> Add Team</a>
+                        </div>
                     </div>
                     <div class="card-body">
 
@@ -33,6 +36,7 @@
                                     <th>No</th>
                                     <th>Name</th>
                                     <th>Position</th>
+                                    <th>Image</th>
                                     <th>Actions</th> <!-- Tambah kolom untuk aksi -->
                                 </tr>
                             </thead>
@@ -84,11 +88,11 @@
                         searchable: false,
                         render: function(data, type, full, meta) {
                             return `
-                                <a href="{{ route('team.edit', ':id') }}" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="{{ route('team.edit', ':id') }}" class="btn btn-warning">Edit</a>
                                 <form style="display:inline-block;" id="deleteForm_${data.id}" method="POST" action="${deleteRoute.replace(':id', data.id)}" onsubmit="return confirm('Apakah Anda yakin ingin menghapus Team ini?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                    <button type="submit" class="btn btn-danger">Delete</button>
                                 </form>
                             `.replace(':id', data.id);
                         }

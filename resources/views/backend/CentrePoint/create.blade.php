@@ -1,4 +1,4 @@
-@extends('layouts.dashboard-volt')
+@extends('layouts.admin.master')
 
 @section('css')
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -11,28 +11,33 @@
     </style>
 @endsection
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Leaflet layer Control</div>
+                <div class="card shadow">
+                    <div class="card-header font-weight-bold">Leaflet layer Control</div>
                     <div class="card-body">
                         <div id="map"></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Titik Koordinat</div>
+                <div class="card shadow">
+                    <div class="card-header font-weight-bold">Titik Koordinat</div>
                     <div class="card-body">
                         <form action="{{ route('centre-point.store') }}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label for="">Koordinat</label>
-                                <input type="text" class="form-control @error('coordinate')
+                                <input type="text"
+                                    class="form-control @error('coordinate')
                                     is-invalid
-                                @enderror" name="coordinate" id="coordinate">
+                                @enderror"
+                                    name="coordinate" id="coordinate">
                                 @error('coordinate')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -47,7 +52,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-sm my-2">Simpan</button>
+                                <button type="submit" class="btn btn-primary btn my-2">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -56,6 +61,10 @@
         </div>
     </div>
 @endsection
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+</script>
 
 @push('javascript')
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"

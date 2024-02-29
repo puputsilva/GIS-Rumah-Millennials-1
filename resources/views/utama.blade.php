@@ -74,7 +74,7 @@
                 <div class="row">
                     @foreach ($programs as $item)
                         <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="icon-box">
+                            <div class="icon-box w-100" style="height: 400px">
                                 <div class="icon"><i class="{{ $item->icon }}"></i></div>
                                 <h4 class="title"><a href="">{{ $item->title }}</a></h4>
                                 <p align="justify" class="description">{{ $item->description }}
@@ -101,7 +101,7 @@
                             <li data-filter="*" class="filter-active">Akan Datang</li>
                             <li data-filter=".filter-app">Sudah Terlaksana</li>
                             <!-- <li data-filter=".filter-card">Card</li>
-                                                                                                                                    <li data-filter=".filter-web">Web</li> -->
+                                                                                                                                                                                            <li data-filter=".filter-web">Web</li> -->
                         </ul>
                     </div>
                 </div>
@@ -111,7 +111,8 @@
                     @foreach ($events as $item)
                         <div class="col-lg-4 col-md-6 portfolio-item {{ $item->attribute }}">
                             <div class="portfolio-wrap">
-                                <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid" alt="" />
+                                <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid"
+                                    style="width: 100%; height: 250px;" alt="" />
                                 <div class="portfolio-links">
                                     <a href="{{ asset('storage/' . $item->image) }}" data-gallery="portfolioGallery"
                                         class="portfolio-lightbox" title="{{ $item->description }}"><i

@@ -1,4 +1,4 @@
-@extends('layouts.dashboard-volt')
+@extends('layouts.admin.master')
 
 @section('css')
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -11,29 +11,34 @@
     </style>
 @endsection
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Update Spot - {{ $spot->name }}</div>
+                <div class="card shadow">
+                    <div class="card-header font-weight-bold">Update Spot - {{ $spot->name }}</div>
                     <div class="card-body">
                         <div id="map"></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Update spot - {{ $spot->name }}</div>
+                <div class="card shadow">
+                    <div class="card-header font-weight-bold">Update spot - {{ $spot->name }}</div>
                     <div class="card-body">
-                        <form action="{{ route('spot.update',$spot->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('spot.update', $spot->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-group ">
                                 <label for="">Koordinat</label>
-                                <input type="text" class="form-control @error('coordinate')
+                                <input type="text"
+                                    class="form-control @error('coordinate')
                                     is-invalid
-                                @enderror" name="coordinate" id="coordinate" value="{{ $spot->coordinates }}">
+                                @enderror"
+                                    name="coordinate" id="coordinate" value="{{ $spot->coordinates }}">
                                 @error('coordinate')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -41,9 +46,11 @@
 
                             <div class="form-group my-3">
                                 <label for="">Nama Spot</label>
-                                <input type="text" class="form-control @error('name')
+                                <input type="text"
+                                    class="form-control @error('name')
                                     is-invalid
-                                @enderror" name="name" value="{{ $spot->name }}">
+                                @enderror"
+                                    name="name" value="{{ $spot->name }}">
                                 @error('name')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -51,10 +58,13 @@
 
                             <div class="form-group my-3">
                                 <label for="">Upload Gambar</label>
-                                <img src="{{ $spot->getImageAsset() }}" alt="">
-                                <input type="file" class="form-control @error('image')
+                                <img class="mb-3" src="{{ $spot->getImageAsset() }}" alt="" height="auto"
+                                    width="100%">
+                                <input type="file"
+                                    class="form-control @error('image')
                                     is-invalid
-                                @enderror" name="image" >
+                                @enderror"
+                                    name="image">
                                 @error('image')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -62,16 +72,18 @@
 
                             <div class="form-group my-3">
                                 <label for="">Deskripsi</label>
-                                <textarea name="description" id="" class="form-control @error('description')
+                                <textarea name="description" id=""
+                                    class="form-control @error('description')
                                     is-invalid
-                                @enderror" cols="30" rows="10">{{ $spot->description }}</textarea>
+                                @enderror"
+                                    cols="30" rows="10">{{ $spot->description }}</textarea>
                                 @error('description')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-sm my-2">Update</button>
+                                <button type="submit" class="btn btn-primary btn my-2">Update</button>
                             </div>
                         </form>
                     </div>
@@ -79,8 +91,11 @@
             </div>
         </div>
     </div>
-
 @endsection
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+</script>
 
 @push('javascript')
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"

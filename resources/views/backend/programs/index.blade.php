@@ -1,4 +1,4 @@
-@extends('layouts.dashboard-volt')
+@extends('layouts.admin.master')
 
 @section('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
@@ -10,10 +10,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="card">
-                    <div class="card-header">
-                        Set Program
-                        <a href="{{ route('program.create') }}" class="btn btn-info btn-sm float-end">Create Program</a>
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <h4 class="m-0 font-weight-bold" style="color: black">Program Data</h4>
+                        <div class="d-sm-flex align-items-center mt-3">
+                            <a href="{{ route('program.create') }}" class="btn text-white"
+                                style="background-color: #303030"><i class="fas fa-plus-circle"></i>Add Program</a>
+                        </div>
                     </div>
                     <div class="card-body">
 
@@ -77,7 +80,7 @@
                     {
                         data: 'description',
                         render: function(data) {
-                            return data.length > 50 ? data.substr(0, 50) + '...' : data;
+                            return data.length > 50 ? data.substr(0, 20) + '...' : data;
                         }
                     },
                     {
@@ -91,7 +94,7 @@
                         searchable: false,
                         render: function(data, type, full, meta) {
                             return `
-                        <a href="{{ route('program.edit', ':id') }}" class="btn" style="background-color: #F3C78E;">Edit</a>
+                        <a href="{{ route('program.edit', ':id') }}" class="btn text-white" style="background-color: #F3C78E;">Edit</a>
                         <form style="display:inline-block;" id="deleteForm_${data.id}" method="POST" action="${deleteRoute.replace(':id', data.id)}" onsubmit="return confirm('Apakah Anda yakin ingin menghapus program ini?')">
                             @csrf
                             @method('DELETE')
