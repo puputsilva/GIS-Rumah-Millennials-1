@@ -1,4 +1,4 @@
-@extends('layouts.dashboard-volt')
+@extends('layouts.admin.master')
 
 @section('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
@@ -8,13 +8,17 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="card">
-                    <div class="card-header">
-                        Set Center Point
-                        <a href="{{ route('centre-point.create') }}" class="btn btn-info btn-sm float-end">Create data</a>
+                <div class="card shadow">
+                    <div class="card-header py-3">
+                        <h4 class="m-0 font-weight-bold" style="color: black">Set Center Point</h4>
+                        <div class="d-sm-flex align-items-center mt-3">
+                            <a href="{{ route('centre-point.create') }}" class="btn text-white"
+                                style="background-color: #303030"><i class="fas fa-plus-circle"></i> Add
+                                Spot</a>
+                        </div>
                     </div>
                     <div class="card-body">
-                        
+
                         @if (session('success'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('success') }}

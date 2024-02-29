@@ -40,7 +40,10 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1 class="text-light"><a href="{{ route('utama') }}"><span>Rumah Millennials</span></a></h1>
+
+                <h1 class="text-light"><a href="{{ route('utama') }}"><span><img
+                                src="{{ asset('assets/img/logo.png') }}" alt="" width="50" height="auto">
+                            Rumah Millennials</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/favicon.png" alt="" class="img-fluid"></a> -->
             </div>
